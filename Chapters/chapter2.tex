@@ -1,0 +1,34 @@
+% Change the title of the chapter as per your convenience.
+\chapter{Some Review and Backgroud}
+\lettrine[lines=1]{T}{his} chapter gives the basic or detailed literature review of the topic and formulate the question by the end
+
+\section{My section}
+Some equations prototype:
+\begin{equation}
+    \label{lag-derv}
+    \dfrac{DA}{Dt} = \dfrac{\partial A}{\partial t} + \vec{u} \cdot \vec{\nabla} A
+\end{equation}
+Referencing the equations is just as easy as \autoref{lag-derv}. The following is the how to write the same equation without any numbering.
+\begin{equation*}
+    \dfrac{DA}{Dt} = \dfrac{\partial A}{\partial t} + \vec{u} \cdot \vec{\nabla} A
+\end{equation*}
+
+\section{Some other section}
+Another section to add useful stuff. This is an aligned equation, when you need to show some derivation and all.
+\begin{align}
+    & dm \, \dfrac{D \vec{u}}{Dt} = dm \vec{g} - 2 \, dm \, \vec{\Omega} \times \vec{u} + \vec{\nabla} \cdot \overleftrightarrow{\sigma} \, d^3x \nonumber \\ % \nonumber prevents it from adding any equation numbering to the line.
+    \implies & \dfrac{D \vec{u}}{Dt} = \vec{g} - 2 \, \vec{\Omega} \times \vec{u} + \dfrac{1}{\rho} \, \vec{\nabla} \cdot \overleftrightarrow{\sigma} \\ % no \nonumber = equation is numbered
+    \implies & \dfrac{D \vec{u}}{Dt} = \vec{g} - 2 \, \vec{\Omega} \times \vec{u} - \dfrac{1}{\rho} \, \vec{\nabla} p + \nu \left[ \nabla^2 \vec{u} + \dfrac{1}{3} \, \vec{\nabla} (\vec{\nabla} \cdot \vec{u}) \right] \label{nse-2-eq} % \label labels a numbered equation.
+\end{align}
+And you can reference the labelled equation as \autoref{nse-2-eq}.
+\subsection{Another stuff}
+You can also write long derivations with no equations being numbered by doing:
+\begin{align*}
+    & dm \, \dfrac{D \vec{u}}{Dt} = dm \vec{g} - 2 \, dm \, \vec{\Omega} \times \vec{u} + \vec{\nabla} \cdot \overleftrightarrow{\sigma} \, d^3x \\
+    \implies & \dfrac{D \vec{u}}{Dt} = \vec{g} - 2 \, \vec{\Omega} \times \vec{u} + \dfrac{1}{\rho} \, \vec{\nabla} \cdot \overleftrightarrow{\sigma} \\
+    \implies & \dfrac{D \vec{u}}{Dt} = \vec{g} - 2 \, \vec{\Omega} \times \vec{u} - \dfrac{1}{\rho} \, \vec{\nabla} p + \nu \left[ \nabla^2 \vec{u} + \dfrac{1}{3} \, \vec{\nabla} (\vec{\nabla} \cdot \vec{u}) \right]
+\end{align*}
+Finally, you can write a boxed result by doing:
+\begin{equation}
+    \therefore \quad \boxed{\dfrac{\partial \rho}{\partial t} + \vec{\nabla} \cdot \vec{J} = 0}
+\end{equation}
